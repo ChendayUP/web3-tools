@@ -19,9 +19,11 @@ export default function DashboardLayout({ children }: any) {
   return (
     <>
       <div className={classes}>
+        {/* menu */}
         <div className="col-span-12 flex flex-col bg-slate-50 shadow-md dark:bg-slate-800 lg:col-span-2 lg:pb-8">
           <ResponsiveMobileAndDesktop>
             <>
+              {/* mobile */}
               <div className="flex p-4">
                 <LinkComponent href="/" className="flex flex-1 items-center ">
                   <BranchColorMode>
@@ -35,6 +37,7 @@ export default function DashboardLayout({ children }: any) {
               </div>
             </>
             <>
+              {/* pc */}
               <div className="flex p-4 py-6">
                 <LinkComponent className="flex items-center" href="/">
                   <BranchColorMode>
