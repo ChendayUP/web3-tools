@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Back should render <Card/> 1`] = `
+<DocumentFragment>
+  <div
+    class="rounded-xl border bg-card text-card-foreground shadow"
+  />
+</DocumentFragment>
+`;
+
+exports[`Back should render <p>card</p> 1`] = `
+<DocumentFragment>
+  <div
+    class="rounded-xl border bg-card text-card-foreground shadow"
+  >
+    <p>
+      card
+    </p>
+  </div>
+</DocumentFragment>
+`;

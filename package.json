@@ -11,7 +11,9 @@
     "prettier": "prettier './src' --write",
     "prepare": "wagmi generate && husky install",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "test": "jest",
+    "update-snapshot": "jest --updateSnapshot"
   },
   "husky": {
     "hooks": {
@@ -83,7 +85,7 @@
     "ky-universal": "^0.11.0",
     "lucide-react": "0.105.0-alpha.4",
     "luxon": "^3.2.1",
-    "next": "13.4.0",
+    "next": "13.5.2",
     "next-themes": "^0.2.1",
     "pino-pretty": "^9.4.0",
     "query-string": "^8.1.0",
@@ -122,8 +124,10 @@
     "@storybook/react": "7.6.3",
     "@storybook/test": "7.6.3",
     "@svgr/webpack": "^6.5.1",
+    "@testing-library/jest-dom": "^6.1.5",
     "@testing-library/react": "^14.1.2",
     "@tsconfig/next": "^1.0.4",
+    "@types/jest": "^29.5.11",
     "@types/luxon": "^3.2.0",
     "@types/node": "^17.0.31",
     "@types/react": "18.0.26",
@@ -147,6 +151,8 @@
     "eslint-plugin-testing-library": "^5.5.1",
     "eslint-plugin-unused-imports": "^2.0.0",
     "husky": "^8.0.2",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
     "jsonwebtoken": "^9.0.0",
     "lint-staged": "^13.1.0",
     "postcss": "^8.4.19",

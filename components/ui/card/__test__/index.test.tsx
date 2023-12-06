@@ -1,9 +1,9 @@
-import { render, screen } from "@testing-library/react"
+import { render, screen } from '@testing-library/react'
 
-import { Card } from "../index"
+import { Card } from '../index'
 
-describe("Back", () => {
-  test("should render with default text", () => {
+describe('Back', () => {
+  test('should render with default text', () => {
     render(
       <Card>
         <p>card</p>
@@ -15,7 +15,7 @@ describe("Back", () => {
     expect(element).toBeInTheDocument()
   })
 
-  test("should render <p>card</p>", () => {
+  test('should render <p>card</p>', () => {
     const { asFragment } = render(
       <Card>
         <p>card</p>
@@ -24,7 +24,7 @@ describe("Back", () => {
     expect(asFragment()).toMatchSnapshot()
   })
 
-  it("should render <Card/>", () => {
+  it('should render <Card/>', () => {
     const { asFragment } = render(<Card />)
 
     expect(asFragment()).toMatchSnapshot()
