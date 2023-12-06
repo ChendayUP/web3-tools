@@ -10,10 +10,14 @@ import Balancer from 'react-wrap-balancer'
 import { LinkComponent } from '@/components/shared/link-component'
 import { FADE_DOWN_ANIMATION_VARIANTS } from '@/config/design'
 import { siteConfig } from '@/config/site'
+import usePersonStore from '@/lib/store/userStore'
 
 export default function Home() {
   const [copied, setCopied] = useState(false)
-
+  const firstName = usePersonStore((state) => state.firstName)
+  const count = usePersonStore((state) => state.count)
+  const updateFirstName = usePersonStore((state) => state.updateFirstName)
+  const updateCount = usePersonStore((state) => state.updateCount)
   return (
     <>
       <div className="relative flex flex-1">
@@ -77,6 +81,12 @@ export default function Home() {
               </LinkComponent>
             </motion.p>
           </motion.div>
+          <div>名字: {firstName}</div>
+          <div>计数: {count}</div>
+          <button onClick={() => updateCount()}>+1</button>
+          <div>
+            <input value={firstName} onChange={(e) => updateFirstName(e.target.value)} />
+          </div>
         </div>
       </div>
     </>

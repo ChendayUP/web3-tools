@@ -235,10 +235,13 @@ dependencies:
     version: 1.0.0(typescript@5.0.4)(zod@3.21.4)
   wagmi:
     specifier: 1.1.0
-    version: 1.1.0(encoding@0.1.13)(react-dom@18.2.0)(react-native@0.71.0)(react@18.2.0)(typescript@5.0.4)(viem@1.0.0)(zod@3.21.4)
+    version: 1.1.0(@types/react@18.0.26)(encoding@0.1.13)(react-dom@18.2.0)(react-native@0.71.0)(react@18.2.0)(typescript@5.0.4)(viem@1.0.0)(zod@3.21.4)
   zod:
     specifier: ^3.21.4
     version: 3.21.4
+  zustand:
+    specifier: ^4.4.7
+    version: 4.4.7(@types/react@18.0.26)(react@18.2.0)
 
 devDependencies:
   '@babel/core':
@@ -7720,7 +7723,7 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
       react-remove-scroll: 2.5.4(@types/react@18.0.26)(react@18.2.0)
       viem: 1.0.0(typescript@5.0.4)(zod@3.21.4)
-      wagmi: 1.1.0(encoding@0.1.13)(react-dom@18.2.0)(react-native@0.71.0)(react@18.2.0)(typescript@5.0.4)(viem@1.0.0)(zod@3.21.4)
+      wagmi: 1.1.0(@types/react@18.0.26)(encoding@0.1.13)(react-dom@18.2.0)(react-native@0.71.0)(react@18.2.0)(typescript@5.0.4)(viem@1.0.0)(zod@3.21.4)
     transitivePeerDependencies:
       - '@types/react'
     dev: false
@@ -9713,7 +9716,7 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       viem: 0.3.50(typescript@5.0.4)(zod@3.21.4)
-      wagmi: 1.1.0(encoding@0.1.13)(react-dom@18.2.0)(react-native@0.71.0)(react@18.2.0)(typescript@5.0.4)(viem@1.0.0)(zod@3.21.4)
+      wagmi: 1.1.0(@types/react@18.0.26)(encoding@0.1.13)(react-dom@18.2.0)(react-native@0.71.0)(react@18.2.0)(typescript@5.0.4)(viem@1.0.0)(zod@3.21.4)
     transitivePeerDependencies:
       - bufferutil
       - typescript
@@ -10369,7 +10372,7 @@ packages:
       prettier: 2.8.4
       typescript: 5.0.4
       viem: 0.3.50(typescript@5.0.4)(zod@3.21.4)
-      wagmi: 1.1.0(encoding@0.1.13)(react-dom@18.2.0)(react-native@0.71.0)(react@18.2.0)(typescript@5.0.4)(viem@1.0.0)(zod@3.21.4)
+      wagmi: 1.1.0(@types/react@18.0.26)(encoding@0.1.13)(react-dom@18.2.0)(react-native@0.71.0)(react@18.2.0)(typescript@5.0.4)(viem@1.0.0)(zod@3.21.4)
       zod: 3.21.4
     transitivePeerDependencies:
       - bufferutil
@@ -10411,7 +10414,7 @@ packages:
       - utf-8-validate
       - zod
 
-  /@wagmi/core@1.1.0(encoding@0.1.13)(react@18.2.0)(typescript@5.0.4)(viem@1.0.0)(zod@3.21.4):
+  /@wagmi/core@1.1.0(@types/react@18.0.26)(encoding@0.1.13)(react@18.2.0)(typescript@5.0.4)(viem@1.0.0)(zod@3.21.4):
     resolution: {integrity: sha512-4EB/Huw4SEXZk45IypPlTj1b7g48fFHk9C5bipdtgD14EwMTdk+z774ViWAI8C+MHPsGBE1rrGMxlDZohdAmPA==}
     peerDependencies:
       typescript: '>=5.0.4'
@@ -10426,9 +10429,10 @@ packages:
       eventemitter3: 4.0.7
       typescript: 5.0.4
       viem: 1.0.0(typescript@5.0.4)(zod@3.21.4)
-      zustand: 4.3.8(react@18.2.0)
+      zustand: 4.4.7(@types/react@18.0.26)(react@18.2.0)
     transitivePeerDependencies:
       - '@react-native-async-storage/async-storage'
+      - '@types/react'
       - bufferutil
       - debug
       - encoding
@@ -22723,7 +22727,7 @@ packages:
       xml-name-validator: 4.0.0
     dev: true
 
-  /wagmi@1.1.0(encoding@0.1.13)(react-dom@18.2.0)(react-native@0.71.0)(react@18.2.0)(typescript@5.0.4)(viem@1.0.0)(zod@3.21.4):
+  /wagmi@1.1.0(@types/react@18.0.26)(encoding@0.1.13)(react-dom@18.2.0)(react-native@0.71.0)(react@18.2.0)(typescript@5.0.4)(viem@1.0.0)(zod@3.21.4):
     resolution: {integrity: sha512-nuAaDOwRN/eexC92/Xvt2c8SPOCZK/IjAg4k+x2LFC3snyxEUKCZlPcRfRruafxg7b5Nr0NjP8rlXoUZitParg==}
     peerDependencies:
       react: '>=17.0.0'
@@ -22736,7 +22740,7 @@ packages:
       '@tanstack/query-sync-storage-persister': 4.29.5
       '@tanstack/react-query': 4.29.5(react-dom@18.2.0)(react-native@0.71.0)(react@18.2.0)
       '@tanstack/react-query-persist-client': 4.29.5(@tanstack/react-query@4.29.5)
-      '@wagmi/core': 1.1.0(encoding@0.1.13)(react@18.2.0)(typescript@5.0.4)(viem@1.0.0)(zod@3.21.4)
+      '@wagmi/core': 1.1.0(@types/react@18.0.26)(encoding@0.1.13)(react@18.2.0)(typescript@5.0.4)(viem@1.0.0)(zod@3.21.4)
       abitype: 0.8.7(typescript@5.0.4)(zod@3.21.4)
       react: 18.2.0
       typescript: 5.0.4
@@ -22744,6 +22748,7 @@ packages:
       viem: 1.0.0(typescript@5.0.4)(zod@3.21.4)
     transitivePeerDependencies:
       - '@react-native-async-storage/async-storage'
+      - '@types/react'
       - bufferutil
       - debug
       - encoding
@@ -23220,17 +23225,21 @@ packages:
       react: 18.2.0
     dev: false
 
-  /zustand@4.3.8(react@18.2.0):
-    resolution: {integrity: sha512-4h28KCkHg5ii/wcFFJ5Fp+k1J3gJoasaIbppdgZFO4BPJnsNxL0mQXBSFgOgAdCdBj35aDTPvdAJReTMntFPGg==}
+  /zustand@4.4.7(@types/react@18.0.26)(react@18.2.0):
+    resolution: {integrity: sha512-QFJWJMdlETcI69paJwhSMJz7PPWjVP8Sjhclxmxmxv/RYI7ZOvR5BHX+ktH0we9gTWQMxcne8q1OY8xxz604gw==}
     engines: {node: '>=12.7.0'}
     peerDependencies:
+      '@types/react': '>=16.8'
       immer: '>=9.0'
       react: '>=16.8'
     peerDependenciesMeta:
+      '@types/react':
+        optional: true
       immer:
         optional: true
       react:
         optional: true
     dependencies:
+      '@types/react': 18.0.26
       react: 18.2.0
       use-sync-external-store: 1.2.0(react@18.2.0)
