@@ -1,0 +1,59 @@
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Progress: resolved 121, reused 121, downloaded 0, added 0
+ WARN  GET https://registry.npmmirror.com/eslint-plugin-storybook error (ETIMEOUT). Will retry in 10 seconds. 2 retries left.
+ WARN  GET https://registry.npmmirror.com/eslint-plugin-storybook error (ETIMEOUT). Will retry in 1 minute. 1 retries left.
+ ERR_PNPM_META_FETCH_FAIL  GET https://registry.npmmirror.com/eslint-plugin-storybook: request to https://registry.npmmirror.com/eslint-plugin-storybook failed, reason: A "socket" was not created for HTTP request before 60001ms
+Progress: resolved 122, reused 121, downloaded 0, added 0
+Progress: resolved 711, reused 711, downloaded 0, added 0
+Progress: resolved 1436, reused 1436, downloaded 0, added 0
+Progress: resolved 1699, reused 1699, downloaded 0, added 0
+ WARN  GET https://registry.npmmirror.com/@storybook%2Fglobal error (ETIMEOUT). Will retry in 10 seconds. 2 retries left.
+ WARN  GET https://registry.npmmirror.com/@types%2Fescodegen error (ETIMEOUT). Will retry in 10 seconds. 2 retries left.
+ WARN  GET https://registry.npmmirror.com/@types%2Festree error (ETIMEOUT). Will retry in 10 seconds. 2 retries left.
+ WARN  GET https://registry.npmmirror.com/@types%2Fnode error (ETIMEOUT). Will retry in 10 seconds. 2 retries left.
+ WARN  GET https://registry.npmmirror.com/acorn error (ETIMEOUT). Will retry in 10 seconds. 2 retries left.
+ WARN  GET https://registry.npmmirror.com/acorn-jsx error (ETIMEOUT). Will retry in 10 seconds. 2 retries left.
+ WARN  GET https://registry.npmmirror.com/acorn-walk error (ETIMEOUT). Will retry in 10 seconds. 2 retries left.
+ WARN  GET https://registry.npmmirror.com/escodegen error (ETIMEOUT). Will retry in 10 seconds. 2 retries left.
+ WARN  GET https://registry.npmmirror.com/html-tags error (ETIMEOUT). Will retry in 10 seconds. 2 retries left.
+ WARN  GET https://registry.npmmirror.com/lodash error (ETIMEOUT). Will retry in 10 seconds. 2 retries left.
+ WARN  GET https://registry.npmmirror.com/prop-types error (ETIMEOUT). Will retry in 10 seconds. 2 retries left.
+ WARN  GET https://registry.npmmirror.com/react-element-to-jsx-string error (ETIMEOUT). Will retry in 10 seconds. 2 retries left.
+ WARN  GET https://registry.npmmirror.com/ts-dedent error (ETIMEOUT). Will retry in 10 seconds. 2 retries left.
+ WARN  GET https://registry.npmmirror.com/type-fest error (ETIMEOUT). Will retry in 10 seconds. 2 retries left.
+ WARN  GET https://registry.npmmirror.com/util-deprecate error (ETIMEOUT). Will retry in 10 seconds. 2 retries left.
+ WARN  GET https://registry.npmmirror.com/@babel%2Fcore error (ETIMEOUT). Will retry in 10 seconds. 2 retries left.
+ WARN  GET https://registry.npmmirror.com/@storybook%2Fglobal error (ETIMEOUT). Will retry in 1 minute. 1 retries left.
+ WARN  GET https://registry.npmmirror.com/@types%2Fescodegen error (ETIMEOUT). Will retry in 1 minute. 1 retries left.
+ WARN  GET https://registry.npmmirror.com/@types%2Festree error (ETIMEOUT). Will retry in 1 minute. 1 retries left.
+ WARN  GET https://registry.npmmirror.com/@types%2Fnode error (ETIMEOUT). Will retry in 1 minute. 1 retries left.
+ WARN  GET https://registry.npmmirror.com/acorn error (ETIMEOUT). Will retry in 1 minute. 1 retries left.
+ WARN  GET https://registry.npmmirror.com/acorn-jsx error (ETIMEOUT). Will retry in 1 minute. 1 retries left.
+ WARN  GET https://registry.npmmirror.com/acorn-walk error (ETIMEOUT). Will retry in 1 minute. 1 retries left.
+ WARN  GET https://registry.npmmirror.com/escodegen error (ETIMEOUT). Will retry in 1 minute. 1 retries left.
+ WARN  GET https://registry.npmmirror.com/html-tags error (ETIMEOUT). Will retry in 1 minute. 1 retries left.
+ WARN  GET https://registry.npmmirror.com/lodash error (ETIMEOUT). Will retry in 1 minute. 1 retries left.
+ WARN  GET https://registry.npmmirror.com/prop-types error (ETIMEOUT). Will retry in 1 minute. 1 retries left.
+ WARN  GET https://registry.npmmirror.com/react-element-to-jsx-string error (ETIMEOUT). Will retry in 1 minute. 1 retries left.
+ WARN  GET https://registry.npmmirror.com/ts-dedent error (ETIMEOUT). Will retry in 1 minute. 1 retries left.
+ WARN  GET https://registry.npmmirror.com/type-fest error (ETIMEOUT). Will retry in 1 minute. 1 retries left.
+ WARN  GET https://registry.npmmirror.com/util-deprecate error (ETIMEOUT). Will retry in 1 minute. 1 retries left.
+ WARN  GET https://registry.npmmirror.com/@babel%2Fcore error (ETIMEOUT). Will retry in 1 minute. 1 retries left.
+ ERR_PNPM_META_FETCH_FAIL  GET https://registry.npmmirror.com/@storybook%2Fglobal: request to https://registry.npmmirror.com/@storybook%2Fglobal failed, reason: A "socket" was not created for HTTP request before 60001ms
+Progress: resolved 1700, reused 1699, downloaded 0, added 0
+ ERR_PNPM_META_FETCH_FAIL  GET https://registry.npmmirror.com/@types%2Fescodegen: request to https://registry.npmmirror.com/@types%2Fescodegen failed, reason: A "socket" was not created for HTTP request before 60001ms
+ ERR_PNPM_META_FETCH_FAIL  GET https://registry.npmmirror.com/@types%2Festree: request to https://registry.npmmirror.com/@types%2Festree failed, reason: A "socket" was not created for HTTP request before 60001ms
+ ERR_PNPM_META_FETCH_FAIL  GET https://registry.npmmirror.com/@types%2Fnode: request to https://registry.npmmirror.com/@types%2Fnode failed, reason: A "socket" was not created for HTTP request before 60001ms
+ ERR_PNPM_META_FETCH_FAIL  GET https://registry.npmmirror.com/acorn: request to https://registry.npmmirror.com/acorn failed, reason: A "socket" was not created for HTTP request before 60001ms
+ ERR_PNPM_META_FETCH_FAIL  GET https://registry.npmmirror.com/acorn-jsx: request to https://registry.npmmirror.com/acorn-jsx failed, reason: A "socket" was not created for HTTP request before 60001ms
+ ERR_PNPM_META_FETCH_FAIL  GET https://registry.npmmirror.com/acorn-walk: request to https://registry.npmmirror.com/acorn-walk failed, reason: A "socket" was not created for HTTP request before 60001ms
+ ERR_PNPM_META_FETCH_FAIL  GET https://registry.npmmirror.com/escodegen: request to https://registry.npmmirror.com/escodegen failed, reason: A "socket" was not created for HTTP request before 60001ms
+ ERR_PNPM_META_FETCH_FAIL  GET https://registry.npmmirror.com/html-tags: request to https://registry.npmmirror.com/html-tags failed, reason: A "socket" was not created for HTTP request before 60001ms
+ ERR_PNPM_META_FETCH_FAIL  GET https://registry.npmmirror.com/lodash: request to https://registry.npmmirror.com/lodash failed, reason: A "socket" was not created for HTTP request before 60001ms
+ ERR_PNPM_META_FETCH_FAIL  GET https://registry.npmmirror.com/prop-types: request to https://registry.npmmirror.com/prop-types failed, reason: A "socket" was not created for HTTP request before 60001ms
+ ERR_PNPM_META_FETCH_FAIL  GET https://registry.npmmirror.com/ts-dedent: request to https://registry.npmmirror.com/ts-dedent failed, reason: A "socket" was not created for HTTP request before 60001ms
+ ERR_PNPM_META_FETCH_FAIL  GET https://registry.npmmirror.com/react-element-to-jsx-string: request to https://registry.npmmirror.com/react-element-to-jsx-string failed, reason: A "socket" was not created for HTTP request before 60001ms
+ ERR_PNPM_META_FETCH_FAIL  GET https://registry.npmmirror.com/util-deprecate: request to https://registry.npmmirror.com/util-deprecate failed, reason: A "socket" was not created for HTTP request before 60001ms
+ ERR_PNPM_META_FETCH_FAIL  GET https://registry.npmmirror.com/type-fest: request to https://registry.npmmirror.com/type-fest failed, reason: A "socket" was not created for HTTP request before 60001ms
+ ERR_PNPM_META_FETCH_FAIL  GET https://registry.npmmirror.com/@babel%2Fcore: request to https://registry.npmmirror.com/@babel%2Fcore failed, reason: A "socket" was not created for HTTP request before 60001ms
+Progress: resolved 1715, reused 1715, downloaded 0, added 0
