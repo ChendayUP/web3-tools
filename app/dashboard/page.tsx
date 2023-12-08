@@ -25,7 +25,7 @@ export default function PageDashboard() {
                 </span>
               </h3>
               <span className="font-light">
-                <WalletAddress className="mt-5 block text-xl font-light" />
+                <WalletAddress className="mt-5 block text-xl font-light" isLink={true} />
                 <div className="mt-4">
                   <span className="font-primary text-3xl font-light">
                     Balance: <WalletBalance decimals={7} className="" /> ETH
