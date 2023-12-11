@@ -11,10 +11,10 @@ export const WalletConnect = ({ className }: WalletConnectProps) => {
   return (
     <span className={className}>
       <ConnectButton
-        showBalance={false}
+        showBalance={true}
         accountStatus={{
-          smallScreen: 'avatar',
-          largeScreen: 'avatar',
+          smallScreen: 'address',
+          largeScreen: 'address',
         }}
         chainStatus={{
           smallScreen: 'icon',
