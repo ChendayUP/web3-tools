@@ -19,6 +19,7 @@ export default function PageDashboardAccount() {
   const { data: client, isError, isLoading } = useWalletClient()
   const publicClient = usePublicClient()
   const [addressList, setAddressList] = useState<addressType[]>([])
+  const [balanceCount, setBalanceCount] = useState<number>(0)
 
   console.log(isError, isLoading)
   const getAddress = async () => {
@@ -36,6 +37,7 @@ export default function PageDashboardAccount() {
       })
       const updatedAddressList = await Promise.all(balancePromises)
       setAddressList(updatedAddressList)
+      setBalanceCount(updatedAddressList.map((addr) => Number(addr.balance)).reduce((pre, cur) => pre + cur, 0))
     }
   }
   useEffect(() => {
@@ -52,35 +54,38 @@ export default function PageDashboardAccount() {
   return (
     <>
       <motion.div
-        className="flex-center flex h-full w-full"
+        className="flex-center flex-col h-full w-full"
         variants={FADE_DOWN_ANIMATION_VARIANTS}
         initial="hidden"
         whileInView="show"
         animate="show"
         viewport={{ once: true }}>
-        <BranchIsWalletConnected>
-          <>
-            {addressList.map((addr) => {
-              return (
-                <div className="card w-[300px] mr-4" key={addr.address}>
-                  <h3 className="text-2xl font-normal">Account {isCurrentAccount(addr.orginAddress)}</h3>
-                  <hr className="my-3 dark:opacity-30" />
-                  <div className="mt-3">
-                    <span className="mr-1 font-bold">Address:</span> {addr.address}
+        <div className="mb-6 text-lg font-bold">Balance Count: {balanceCount}</div>
+        <div className="flex-center">
+          <BranchIsWalletConnected>
+            <>
+              {addressList.map((addr) => {
+                return (
+                  <div className="card w-[300px] mr-4" key={addr.address}>
+                    <h3 className="text-2xl font-normal">Account {isCurrentAccount(addr.orginAddress)}</h3>
+                    <hr className="my-3 dark:opacity-30" />
+                    <div className="mt-3">
+                      <span className="mr-1 font-bold">Address:</span> {addr.address}
+                    </div>
+                    <div className="mt-3">
+                      <span className="mr-1 font-bold">Balance:</span> {addr.balance}
+                    </div>
+                    <div className="mt-3">
+                      <span className="mr-1 font-bold">Nonce:</span> <WalletNonce />
+                    </div>
+                    <hr className="my-3 dark:opacity-30" />
                   </div>
-                  <div className="mt-3">
-                    <span className="mr-1 font-bold">Balance:</span> {addr.balance}
-                  </div>
-                  <div className="mt-3">
-                    <span className="mr-1 font-bold">Nonce:</span> <WalletNonce />
-                  </div>
-                  <hr className="my-3 dark:opacity-30" />
-                </div>
-              )
-            })}
-          </>
-          <h3 className="text-lg font-normal">Connect Wallet to view your personalized dashboard.</h3>
-        </BranchIsWalletConnected>
+                )
+              })}
+            </>
+            <h3 className="text-lg font-normal">Connect Wallet to view your personalized dashboard.</h3>
+          </BranchIsWalletConnected>
+        </div>
       </motion.div>
     </>
   )
