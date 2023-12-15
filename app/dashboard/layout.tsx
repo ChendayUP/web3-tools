@@ -48,9 +48,11 @@ export default function DashboardLayout({ children }: any) {
                 </LinkComponent>
               </div>
               <div className="flex-1 px-8 py-5">
+                {/* menu list */}
                 <MenuDashboardSidebar className="mt-4 flex-1" />
               </div>
               <div className="px-8">
+                {/* wallet icon name address */}
                 <WalletConnect />
                 <LinkComponent href="/admin" className="link my-2 mt-8 inline-block text-xs">
                   Admin
