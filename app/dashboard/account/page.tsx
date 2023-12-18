@@ -3,9 +3,10 @@ import { WalletAddress, WalletBalance, WalletNonce, trimFormattedBalance, trunca
 import { motion } from 'framer-motion'
 import { BranchIsWalletConnected } from '@/components/shared/branch-is-wallet-connected'
 import { FADE_DOWN_ANIMATION_VARIANTS } from '@/config/design'
-import { useWalletClient, usePublicClient, useAccount, useEnsAvatar, useEnsName } from 'wagmi'
+import { useWalletClient, usePublicClient, useAccount, useNetwork } from 'wagmi'
 import { formatEther } from 'viem'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useMemo, useCallback } from 'react'
+import Image from 'next/image'
 
 interface addressType {
   orginAddress: string | undefined
@@ -15,13 +16,10 @@ interface addressType {
 
 export default function PageDashboardAccount() {
   const { address: currentAddress } = useAccount()
-  // const { chainId, enabled } = useMainnet()
-  const { data: ensName } = useEnsName({
-    address: currentAddress,
-  })
-  const { data: ensAvatar } = useEnsAvatar({
-    name: ensName,
-  })
+  const { chain } = useNetwork()
+  // @ts-ignore
+  const iconUrl = chain?.iconUrl || ''
+  console.log('chain', chain)
   const { data: client, isError, isLoading } = useWalletClient()
   const publicClient = usePublicClient()
   const [addressList, setAddressList] = useState<addressType[]>([])
@@ -31,11 +29,11 @@ export default function PageDashboardAccount() {
   const getAddress = async () => {
     if (client) {
       const addressList = await client.requestAddresses()
-      const ensName =
-        currentAddress &&
-        (await publicClient.getEnsName({
-          address: currentAddress,
-        }))
+      // const ensName =
+      //   currentAddress &&
+      //   (await publicClient.getEnsName({
+      //     address: currentAddress,
+      // }))
       const balancePromises = addressList.map(async (addr) => {
         const balance = await publicClient.getBalance({
           address: addr,
@@ -55,12 +53,15 @@ export default function PageDashboardAccount() {
     getAddress()
   }, [isLoading])
 
-  const isCurrentAccount = (addr?: string) => {
-    // console.log(addr, currentAddress)
-    if (addr === currentAddress) {
-      return <span className="text-blue-700">(current)</span>
-    }
-  }
+  const isCurrentAccount = useCallback(
+    (addr?: string) => {
+      console.log(addr, currentAddress)
+      if (addr === currentAddress) {
+        return <span className="text-blue-700">(current)</span>
+      }
+    },
+    [currentAddress]
+  )
 
   return (
     <>
@@ -76,9 +77,11 @@ export default function PageDashboardAccount() {
         ) : (
           <>
             <div className="mb-6 text-lg font-bold">
-              <span>{ensAvatar}</span>
-              <span>{ensName}</span>
-              <span>Balance Count: {balanceCount}</span>
+              <Image src={iconUrl} width={30} height={30} alt="" style={{ display: 'inline', marginRight: '5px' }} />
+              <span>{chain?.name}</span>
+            </div>
+            <div className="mb-6 text-lg font-bold">
+              <span> Balance Count: {balanceCount}</span>
             </div>
             <div className="grid grid-cols-12 gap-4">
               {addressList.map((addr) => {

@@ -46,6 +46,8 @@ base.iconUrl = '/icons/NetworkBaseTest.svg'
 celo.iconUrl = '/icons/NetworkCelo.svg'
 // @ts-ignore
 celoAlfajores.iconUrl = '/icons/NetworkCeloTest.svg'
+// @ts-ignore
+mainnet.iconUrl = '/icons/NetworkEthereum1.svg'
 
 const CHAINS_SUPPORTED_BY_ALCHEMY = [mainnet, goerli, sepolia] // TODO add other chains supported by Alchemy
 const CHAINS_SUPPORTED_BY_INFURA = [mainnet, goerli, sepolia] // TODO add other chains supported by Infura
