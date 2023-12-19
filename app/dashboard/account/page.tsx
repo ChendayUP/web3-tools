@@ -7,10 +7,14 @@ import { useWalletClient, usePublicClient, useAccount, useNetwork } from 'wagmi'
 import { formatEther } from 'viem'
 import { useEffect, useState, useMemo, useCallback } from 'react'
 import Image from 'next/image'
+import { CopyToClipboard } from 'react-copy-to-clipboard'
+import { FaCopy, FaPaperPlane } from 'react-icons/fa'
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
+import { DialogSend } from '@/components/app/dashboard/dialog-send'
 
 interface addressType {
-  orginAddress: string | undefined
-  address: string | undefined
+  orginAddress: string
+  address: string
   balance: string
 }
 
@@ -40,8 +44,8 @@ export default function PageDashboardAccount() {
         })
         return {
           orginAddress: addr,
-          address: truncateAddress(addr),
-          balance: trimFormattedBalance(formatEther(balance)),
+          address: truncateAddress(addr) || '',
+          balance: trimFormattedBalance(formatEther(balance)) || '',
         }
       })
       const updatedAddressList = await Promise.all(balancePromises)
@@ -81,7 +85,9 @@ export default function PageDashboardAccount() {
               <span>{chain?.name}</span>
             </div>
             <div className="mb-6 text-lg font-bold">
-              <span> Balance Count: {balanceCount}</span>
+              <span>
+                Balance Count: {balanceCount} <span className="text-base font-normal">{chain?.nativeCurrency.name}</span>
+              </span>
             </div>
             <div className="grid grid-cols-12 gap-4">
               {addressList.map((addr) => {
@@ -89,8 +95,14 @@ export default function PageDashboardAccount() {
                   <div className="card col-span-4" key={addr.address}>
                     <h3 className="text-2xl font-normal">Account {isCurrentAccount(addr.orginAddress)}</h3>
                     <hr className="my-3 dark:opacity-30" />
-                    <div className="mt-3">
+                    <div className="flex items-center mt-3">
                       <span className="mr-1 font-bold">Address:</span> {addr.address}
+                      <CopyToClipboard text={addr.orginAddress as string}>
+                        <span className="flex-center flex ml-2 mr-auto h-7 w-7 cursor-pointer rounded-md bg-neutral-100 p-2 hover:bg-neutral-200 dark:bg-neutral-800 hover:dark:bg-neutral-900">
+                          <FaCopy className=" text-neutral-600 dark:text-neutral-100" />
+                        </span>
+                      </CopyToClipboard>
+                      <DialogSend address={addr.orginAddress} />
                     </div>
                     <div className="mt-3">
                       <span className="mr-1 font-bold">Balance:</span> {addr.balance}
@@ -98,7 +110,7 @@ export default function PageDashboardAccount() {
                     <div className="mt-3">
                       <span className="mr-1 font-bold">Nonce:</span> <WalletNonce />
                     </div>
-                    <hr className="my-3 dark:opacity-30" />
+                    {/* <hr className="my-3 dark:opacity-30" /> */}
                   </div>
                 )
               })}
